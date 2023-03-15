@@ -9,7 +9,9 @@ const Navbar = () => {
         {navItems.map((item) => {
           return (
             <li key={item.id}>
-              <Link className="nav-item">{item.item}</Link>
+              <Link className="nav-item" to={item.nav}>
+                {item.item}
+              </Link>
             </li>
           );
         })}
