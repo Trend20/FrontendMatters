@@ -3,10 +3,12 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Hero = () => {
+  // component state
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
+  // handling email subscription
   const handleEmailSubscription = (e) => {
     // prevent default form behavior
     e.preventDefault();

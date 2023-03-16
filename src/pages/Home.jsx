@@ -1,12 +1,16 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Posts from "./Posts";
+import RecentPosts from "../components/RecentPosts";
+import PopularPosts from "../components/PopularPosts";
+import ReadMore from "../components/ReadMore";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <Posts />
+      <RecentPosts />
+      <PopularPosts />
+      <ReadMore />
     </div>
   );
 };
