@@ -1,7 +1,7 @@
 export const posts = [
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
@@ -9,7 +9,7 @@ export const posts = [
   },
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
@@ -17,7 +17,7 @@ export const posts = [
   },
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
@@ -25,7 +25,7 @@ export const posts = [
   },
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
@@ -33,7 +33,7 @@ export const posts = [
   },
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
@@ -41,7 +41,7 @@ export const posts = [
   },
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
@@ -49,7 +49,7 @@ export const posts = [
   },
   {
     img: "/images/blog1.jpg",
-    date: new Date().now,
+    date: "12/05/2019",
     author: "Enock Omondi",
     title: "React Hooks",
     description:
