@@ -10,3 +10,8 @@
 img{
   max-width: 100%;
 }
+
+.nav-item{
+  text-decoration: none;
+  color: #2596be;
+}

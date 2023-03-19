@@ -9,7 +9,9 @@ const Navbar = () => {
     <NavContainer className="nav-container">
       <NavItemsContainer>
         <LogoContainer className="logo">
-          <Link to="/">FrontendMatters</Link>
+          <Link to="/">
+            <img src="/images/logo2.png" alt="" />
+          </Link>
         </LogoContainer>
         <NavLinksContainer>
           {navItems.map((item) => {
