@@ -150,5 +150,7 @@ const PostImage = styled.div`
 
   img {
     max-width: 100%;
+    border-radius: 10px;
+    height: 200px;
   }
 `;
