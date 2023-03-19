@@ -113,7 +113,7 @@ export const popularPosts = [
     img: "/images/blog4.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
-    title: "React Hooks",
+    title: "React DevTools",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
@@ -121,7 +121,7 @@ export const popularPosts = [
     img: "/images/blog5.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
-    title: "React Hooks",
+    title: "React Best Practices",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
@@ -129,7 +129,7 @@ export const popularPosts = [
     img: "/images/blog6.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
-    title: "React Hooks",
+    title: "React Router",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
