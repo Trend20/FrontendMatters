@@ -57,6 +57,7 @@ export const posts = [
   },
 ];
 
+// recent posts
 export const recentPosts = [
   {
     img: "/images/blog1.jpg",
@@ -84,6 +85,7 @@ export const recentPosts = [
   },
 ];
 
+// popular posts
 export const popularPosts = [
   {
     img: "/images/blog1.jpg",
