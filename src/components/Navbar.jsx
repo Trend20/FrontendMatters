@@ -26,12 +26,12 @@ const Navbar = () => {
         </NavLinksContainer>
       </NavItemsContainer>
       <NavIconsContainer>
-        <li>
+        <Link className="nav-item icons">
           <MdOutlineDarkMode />
-        </li>
-        <li>
+        </Link>
+        <Link className="nav-item icons">
           <MdRssFeed />
-        </li>
+        </Link>
       </NavIconsContainer>
     </NavContainer>
   );
