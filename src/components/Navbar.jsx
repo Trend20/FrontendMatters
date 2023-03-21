@@ -10,7 +10,7 @@ const Navbar = () => {
       <NavItemsContainer>
         <LogoContainer className="logo">
           <Link to="/">
-            <img src="/images/logo2.png" alt="" />
+            <img src="/images/logo2.png" loading="lazy" alt="" />
           </Link>
         </LogoContainer>
         <NavLinksContainer>

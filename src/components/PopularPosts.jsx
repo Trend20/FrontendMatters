@@ -35,7 +35,7 @@ const PopularPosts = () => {
                 </div>
               </PostTextContainer>
               <PostImage className="post-img">
-                <img src={post.img} alt="" />
+                <img src={post.img} loading="lazy" alt="" />
               </PostImage>
             </SinglePostContainer>
           );
