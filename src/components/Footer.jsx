@@ -4,31 +4,36 @@ import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <FooterContainer className="footer">
-      <FooterLogo className="footer-logo">
-        <Link>
-          <img src="/images/logo2.png" alt="footer-logo" />
-        </Link>
-        <p className="footer-text">Welcome again!</p>
-      </FooterLogo>
-      <FooterLinks>
-        <FooterTopics className="Topics">
-          <p className="footer-text">Topics</p>
-          <Link className="nav-item">React</Link>
-          <Link className="nav-item">HTML</Link>
-          <Link className="nav-item">CSS</Link>
-          <Link className="nav-item">NextJS</Link>
-          <Link className="nav-item">Javascript</Link>
-          <Link className="nav-item">Best Practices</Link>
-        </FooterTopics>
-        <SocialLinks className="social-links">
-          <p className="footer-text">Social Links</p>
-          <Link className="nav-item">Twitter</Link>
-          <Link className="nav-item">Contact</Link>
-          <Link className="nav-item">Privacy Policy</Link>
-        </SocialLinks>
-      </FooterLinks>
-    </FooterContainer>
+    <>
+      <FooterContainer className="footer">
+        <FooterLogo className="footer-logo">
+          <Link>
+            <img src="/images/logo2.png" alt="footer-logo" />
+          </Link>
+          <p className="footer-text">Welcome again!</p>
+        </FooterLogo>
+        <FooterLinks>
+          <FooterTopics className="Topics">
+            <p className="footer-text">Topics</p>
+            <Link className="nav-item">React</Link>
+            <Link className="nav-item">HTML</Link>
+            <Link className="nav-item">CSS</Link>
+            <Link className="nav-item">NextJS</Link>
+            <Link className="nav-item">Javascript</Link>
+            <Link className="nav-item">Best Practices</Link>
+          </FooterTopics>
+          <SocialLinks className="social-links">
+            <p className="footer-text">Social Links</p>
+            <Link className="nav-item">Twitter</Link>
+            <Link className="nav-item">Contact</Link>
+            <Link className="nav-item">Privacy Policy</Link>
+          </SocialLinks>
+        </FooterLinks>
+      </FooterContainer>
+      <p className="copyright">
+        © 2022-present FrontendMatters. All Rights Reserved.
+      </p>
+    </>
   );
 };
 

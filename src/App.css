@@ -24,3 +24,12 @@ img{
 .footer-text{
   opacity: .5;
 }
+
+.copyright{
+  display: flex;
+  background: #f0f4f5;
+  margin-left: 70px;
+  font-size: .8rem;
+  opacity: .8;
+  padding: 10px 0px;
+}
