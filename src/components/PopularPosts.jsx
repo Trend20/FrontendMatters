@@ -54,12 +54,21 @@ const PopularPostContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const HeadingText = styled.div`
   width: 50%;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0px 20px;
+  }
 `;
 
 const PopularPostHeader = styled.div`
@@ -67,11 +76,22 @@ const PopularPostHeader = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const AllPostsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 const SinglePostContainer = styled.div`
@@ -79,6 +99,12 @@ const SinglePostContainer = styled.div`
   width: 100%;
   flex-direction: column;
   margin: 30px 0px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 30px 0px;
+    flex-direction: column-reverse;
+  }
 `;
 
 const PostTextContainer = styled.div`
@@ -123,5 +149,10 @@ const PostImage = styled.div`
     max-width: 100%;
     border-radius: 10px;
     height: 200px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 `;

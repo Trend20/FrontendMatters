@@ -73,16 +73,25 @@ const RecentPostContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+  }
 `;
 
 const HeadingText = styled.div`
   width: 50%;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    width: 60%;
+  }
 `;
 
 const HeadingLink = styled.div`
-  width: 20%;
+  width: 30%;
   align-items: center;
   justify-content: center;
 `;
@@ -92,6 +101,10 @@ const RecentPostHeader = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const AllPostsContainer = styled.div`
@@ -102,6 +115,14 @@ const AllPostsContainer = styled.div`
   hr {
     border: 1px solid #f0efeb;
     width: 90%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -109,6 +130,12 @@ const SinglePostContainer = styled.div`
   display: flex;
   width: 100%;
   margin: 30px 0px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 10px;
+    flex-direction: column-reverse;
+  }
 `;
 
 const PostTextContainer = styled.div`
@@ -116,17 +143,29 @@ const PostTextContainer = styled.div`
   flex-direction: column;
   width: 60%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   p {
     width: 70%;
     font-size: 0.8rem;
     line-height: 2;
     margin-top: 20px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   div {
     display: flex;
     width: 50%;
     margin-top: 20px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     p {
       width: 100%;
@@ -148,9 +187,18 @@ const PostImage = styled.div`
   display: flex;
   width: 30%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   img {
     max-width: 100%;
     border-radius: 10px;
     height: 200px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 `;

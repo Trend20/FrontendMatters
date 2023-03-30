@@ -47,6 +47,14 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   background: #f0f4f5;
   margin-top: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
 `;
 const FooterLogo = styled.div`
   display: flex;
@@ -55,14 +63,29 @@ const FooterLogo = styled.div`
   align-items: center;
   flex-direction: column;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   p {
     font-size: 0.8rem;
     width: 100%;
     margin-top: -25px;
+
+    @media (max-width: 768px) {
+      width: 40%;
+      // margin-top: px;
+    }
   }
 
   img {
     max-width: 100%;
+
+    @media (max-width: 768px) {
+      width: 40%;
+    }
   }
 `;
 
@@ -71,6 +94,13 @@ const FooterLinks = styled.div`
   width: 40%;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
 `;
 
 const FooterTopics = styled.div`
@@ -78,6 +108,10 @@ const FooterTopics = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -86,4 +120,8 @@ const SocialLinks = styled.div`
   width: 30%;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 `;

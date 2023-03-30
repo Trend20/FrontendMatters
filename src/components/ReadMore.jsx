@@ -31,4 +31,8 @@ const Button = styled.button`
   background: #2596be;
   color: #fff;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 `;

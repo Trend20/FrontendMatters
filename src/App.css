@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
 }
+.logo-link{
+  display: flex;
+}
 
 img{
   max-width: 100%;
@@ -33,4 +36,13 @@ img{
   opacity: .8;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .copyright{
+    display: flex;
+    background: #f0f4f5;
+    padding-left: 20px;
+    font-size: .7rem;
+  }
 }

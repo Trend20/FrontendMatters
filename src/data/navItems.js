@@ -16,3 +16,11 @@ export const navItems = [
     nav: "/articles",
   },
 ];
+
+export const footerLinks = [
+  {
+    id: uuidv4(),
+    item: "Home",
+    nav: "/",
+  },
+];

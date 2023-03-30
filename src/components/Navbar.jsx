@@ -8,39 +8,11 @@ import { navItems } from "../data/navItems";
 const Navbar = () => {
   const [toggle, toggleNav] = useState(false);
   return (
-    // <NavContainer className="nav-container">
-    //   <NavItemsContainer>
-    //     <LogoContainer className="logo">
-    //       <Link to="/">
-    //         <img src="/images/logo2.png" loading="lazy" alt="" />
-    //       </Link>
-    //     </LogoContainer>
-    //     <NavLinksContainer>
-    //       {navItems.map((item) => {
-    //         return (
-    //           <li key={item.id}>
-    //             <Link className="nav-item" to={item.nav}>
-    //               {item.item}
-    //             </Link>
-    //           </li>
-    //         );
-    //       })}
-    //     </NavLinksContainer>
-    //   </NavItemsContainer>
-    //   <NavIconsContainer>
-    //     <Link className="nav-item icons">
-    //       <MdOutlineDarkMode />
-    //     </Link>
-    //     <Link className="nav-item icons">
-    //       <MdRssFeed />
-    //     </Link>
-    //   </NavIconsContainer>
-    // </NavContainer>
     <>
       <Nav>
         <LogoContainer className="logo">
-          <Link to="/">
-            <img src="/images/logo2.png" loading="lazy" alt="" />
+          <Link to="/" className="logo-link">
+            <img src="/images/logo2.png" loading="lazy" alt="logo" />
           </Link>
         </LogoContainer>
         <NavigationContainer className="navigation">
@@ -57,6 +29,14 @@ const Navbar = () => {
               })}
             </Menu>
           </NavBar>
+          <NavIconsContainer>
+            <Link className="nav-item icons">
+              <MdOutlineDarkMode />
+            </Link>
+            <Link className="nav-item icons">
+              <MdRssFeed />
+            </Link>
+          </NavIconsContainer>
         </NavigationContainer>
         <NavIcon onClick={() => toggleNav(!toggle)}>
           <Line open={toggle} />
@@ -81,13 +61,6 @@ const Navbar = () => {
   );
 };
 
-const LogoContainer = styled.div`
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-`;
-
 const NavigationContainer = styled.div`
   display: flex;
   align-items: center;
@@ -95,25 +68,22 @@ const NavigationContainer = styled.div`
   width: 60%;
 `;
 
-const NavBar = styled.nav`
+const LogoContainer = styled.div`
   display: flex;
-  align-items: center;
-  width: 100%;
+  width: 10%;
   justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 20%;
+  }
 `;
 
-const LoginLink = styled.li`
-  list-style: none;
+const NavBar = styled.nav`
   display: flex;
-  font-size: 0.9rem;
-  align-items: center;
   justify-content: center;
-  padding: 15px;
-  cursor: pointer;
-  background-color: #817dea;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 700;
+  align-items: center;
+  width: 80%;
 `;
 
 const Nav = styled.nav`
@@ -208,40 +178,6 @@ const OverlayMenu = styled.ul`
     align-items: flex-start;
     justify-content: center;
     width: 100% !important;
-  }
-`;
-
-const NavContainer = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-`;
-
-const NavItemsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-`;
-// const LogoContainer = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 10%;
-// `;
-
-const NavLinksContainer = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-
-  li {
-    padding: 0px 20px;
-    list-style: none;
-    text-decoration: none;
   }
 `;
 
