@@ -45,7 +45,8 @@ const FooterContainer = styled.div`
   width: 100%;
   padding: 70px;
   justify-content: space-between;
-  background: #f0f4f5;
+  align-items: flex-start;
+  // background: #f0f4f5;
   margin-top: 50px;
 
   @media (max-width: 768px) {

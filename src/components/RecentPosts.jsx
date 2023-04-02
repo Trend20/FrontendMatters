@@ -73,6 +73,7 @@ const RecentPostContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-top: 50px;
 
   @media (max-width: 768px) {
     width: 100%;

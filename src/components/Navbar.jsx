@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import styled from "styled-components";
-import { MdOutlineDarkMode, MdRssFeed } from "react-icons/md";
+import { MdOutlineDarkMode, MdRssFeed, MdLightMode } from "react-icons/md";
 import { navItems } from "../data/navItems";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   const [toggle, toggleNav] = useState(false);
+
+  const switchTheme = () => {
+    if (darkMode) {
+      theme.dispatch({ type: "LIGHTMODE" });
+    } else {
+      theme.dispatch({ type: "DARKMODE" });
+    }
+  };
+
   return (
     <>
       <Nav>
@@ -30,8 +42,13 @@ const Navbar = () => {
             </Menu>
           </NavBar>
           <NavIconsContainer>
-            <Link className="nav-item icons">
-              <MdOutlineDarkMode />
+            <Link
+              className={` nav-item icons ${
+                darkMode ? "btn-dark" : "btn-light"
+              }`}
+              onClick={switchTheme}
+            >
+              {darkMode ? <MdOutlineDarkMode /> : <MdLightMode />}
             </Link>
             <Link className="nav-item icons">
               <MdRssFeed />

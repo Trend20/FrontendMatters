@@ -16,7 +16,7 @@ img{
 
 .nav-item{
   text-decoration: none;
-  color: #2596be;
+  color: #2596be !important;
 }
 
 .icons{
@@ -30,13 +30,55 @@ img{
 
 .copyright{
   display: flex;
-  background: #f0f4f5;
+  /* background: #f0f4f5; */
   padding-left: 70px;
   font-size: .8rem;
   opacity: .8;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+/* light mode styles */
+.bg-light {
+  background-color: #fff;
+}
+
+.heading-light {
+  color: #222;
+}
+
+.para-light {
+  color: #222;
+}
+
+.btn-light {
+  background-color: #222;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Dark Mode Styles */
+
+.bg-dark {
+  background-color: #222;
+}
+
+.heading-dark {
+  color: #fff;
+}
+
+.para-dark {
+  color: #fff;
+}
+
+.btn-dark {
+  background-color: #fff;
+  color: #111;
+  opacity: 1;
+}
+
+/* end dark light theme */
 
 @media (max-width: 768px) {
   .copyright{
