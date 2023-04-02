@@ -159,7 +159,7 @@ const Line = styled.span`
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: #000;
+  background-color: #2596be;
   transition: width 0.4s ease-in-out;
   :nth-child(2) {
     width: ${(props) => (props.open ? "40%" : "70%")};

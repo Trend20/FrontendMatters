@@ -83,7 +83,7 @@ img{
 @media (max-width: 768px) {
   .copyright{
     display: flex;
-    background: #f0f4f5;
+    /* background: #f0f4f5; */
     padding-left: 20px;
     font-size: .7rem;
   }
