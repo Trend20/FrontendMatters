@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
+import AOS from 'aos';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { popularPosts } from "../data/posts";
 
 const PopularPosts = () => {
+
+  useEffect(() =>{
+    AOS.init();
+  },[])
   return (
     <PopularPostContainer className="popular-posts">
       <PopularPostHeader className="section-header">

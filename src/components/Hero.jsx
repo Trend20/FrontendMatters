@@ -121,6 +121,10 @@ const HeroFormButton = styled.button`
   font-weight: 500;
   color: #fff;
 
+  &:hover{
+    background: #0e699e;
+  }
+
   @media (max-width: 768px) {
     width: 30%;
     margin-left: 10px;
