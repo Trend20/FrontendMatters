@@ -7,8 +7,8 @@ export const navItems = [
   },
   {
     id: uuidv4(),
-    item: "About",
-    nav: "/about",
+    item: "Latest",
+    nav: "/latest",
   },
   {
     id: uuidv4(),
