@@ -4,10 +4,11 @@ import Post from "../components/Post";
 
 const Posts = () => {
   return (
-    <div>
-      {posts.map((post) => {
+    <div className="posts">
+      {posts.map((post, index) => {
         return (
           <Post
+            key={index}
             img={post.img}
             author={post.author}
             date={post.date}

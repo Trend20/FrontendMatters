@@ -88,3 +88,15 @@ img{
     font-size: .7rem;
   }
 }
+
+/* posts styles */
+
+.posts{
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  width: 80%;
+  margin: auto;
+  padding: 100px;
+  grid-gap: 30px;
+
+}
