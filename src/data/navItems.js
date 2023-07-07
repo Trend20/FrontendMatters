@@ -7,20 +7,7 @@ export const navItems = [
   },
   {
     id: uuidv4(),
-    item: "Latest",
-    nav: "/latest",
-  },
-  {
-    id: uuidv4(),
     item: "Articles",
     nav: "/articles",
-  },
-];
-
-export const footerLinks = [
-  {
-    id: uuidv4(),
-    item: "Home",
-    nav: "/",
   },
 ];
