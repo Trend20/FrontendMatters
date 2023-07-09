@@ -3,6 +3,7 @@ import { recentPosts } from "../data/posts";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { GoLinkExternal } from "react-icons/go";
+import Post from "./Post";
 
 const RecentPosts = () => {
   return (
@@ -13,6 +14,7 @@ const RecentPosts = () => {
         </HeadingText>
         <HeadingLink className="view-all">
           <Link
+            to={"/articles"}
             style={{
               display: "flex",
               alignItems: "center",
@@ -32,29 +34,15 @@ const RecentPosts = () => {
         {recentPosts.map((post) => {
           return (
             <>
-              <SinglePostContainer className="single-post">
-                <PostTextContainer className="post-text">
-                  <Link
-                    style={{
-                      textTransform: "capitalize",
-                      fontSize: "1.2rem",
-                      color: "#2596be",
-                      fontWeight: "700",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {post.title}
-                  </Link>
-                  <p>{post.description}</p>
-                  <div>
-                    <p>{post.author}</p>
-                    <p style={{ marginLeft: "20px" }}>{post.date}</p>
-                  </div>
-                </PostTextContainer>
-                <PostImage className="post-img">
-                  <img src={post.img} loading="lazy" alt="" />
-                </PostImage>
-              </SinglePostContainer>
+              <Post
+                id={post.id}
+                img={post.img}
+                title={post.title}
+                author={post.author}
+                description={post.description}
+                date={post.date}
+                key={post.id}
+              />
               <hr />
             </>
           );

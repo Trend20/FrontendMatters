@@ -1,5 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
 export const posts = [
   {
+    id: uuidv4(),
     img: "/images/blog1.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -8,6 +10,7 @@ export const posts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog1.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -16,6 +19,7 @@ export const posts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog2.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -24,6 +28,7 @@ export const posts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog3.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -32,6 +37,7 @@ export const posts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog4.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -40,6 +46,7 @@ export const posts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog5.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -60,6 +67,7 @@ export const posts = [
 // recent posts
 export const recentPosts = [
   {
+    id: uuidv4(),
     img: "/images/blog1.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -68,6 +76,7 @@ export const recentPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog2.jpg",
     date: "12/05/2019",
     author: "Dev Papa",
@@ -76,6 +85,7 @@ export const recentPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog3.jpg",
     date: "12/05/2019",
     author: "Dev Kurt",
@@ -88,6 +98,7 @@ export const recentPosts = [
 // popular posts
 export const popularPosts = [
   {
+    id: uuidv4(),
     img: "/images/blog1.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -96,6 +107,7 @@ export const popularPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog2.jpg",
     date: "12/05/2019",
     author: "Dev Papa",
@@ -104,6 +116,7 @@ export const popularPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog3.jpg",
     date: "12/05/2019",
     author: "Dev Kurt",
@@ -112,6 +125,7 @@ export const popularPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog4.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -120,6 +134,7 @@ export const popularPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog5.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",
@@ -128,6 +143,7 @@ export const popularPosts = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellat omnis reprehenderit ex qui a.",
   },
   {
+    id: uuidv4(),
     img: "/images/blog6.jpg",
     date: "12/05/2019",
     author: "Enock Omondi",

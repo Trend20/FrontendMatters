@@ -1,10 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ReadMore = () => {
   return (
     <ReadMoreContainer className="read-more">
-      <Button>Read More</Button>
+      <Link
+        to={"/articles"}
+        style={{
+          textDecoration: "none",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Button>Read More</Button>
+      </Link>
     </ReadMoreContainer>
   );
 };

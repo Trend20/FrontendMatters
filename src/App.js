@@ -1,10 +1,11 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { ThemeContext } from "./context/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Posts from "./pages/Posts";
+import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<Posts />} />
-          <Route path="/post:id" element={<Post />} />
+          <Route path="/post/:id" element={<SinglePost />} />
         </Routes>
       </div>
     </BrowserRouter>

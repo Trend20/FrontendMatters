@@ -1,26 +1,31 @@
-import {React} from 'react'
-const SinglePost = () =>{
-  return(
-    <div className="single-post">
-      <div className="cover-image">
-        <img src="/public/images/blog1.jpg" alt="coverimage" />
+import { React } from "react";
+const SinglePost = () => {
+  return (
+    <>
+      <div className="single-post">
+        <div className="single-post">
+          <div className="cover-image">
+            <img src="/images/blog1.jpg" alt="post" />
+          </div>
+          <div className="post-de">
+            <div className="post-title">
+              <h1>Redux Toolkit</h1>
+            </div>
+            <div className="post-description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Aperiam odit officiis nisi quod magnam eligendi sunt repellat
+                deleniti architecto sed.
+              </p>
+            </div>
+            <div className="post-timestamp">
+              <p>{new Date().toLocaleDateString()}</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="post-de">
-        <div className="post-title">
-          <h1>Redux Toolkit Refresher</h1>
-        </div>
-        <div className="post-description">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt quis tempore ipsam. Perspiciatis, rem!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt quis tempore ipsam. Perspiciatis, rem!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt quis tempore ipsam. Perspiciatis, rem!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt quis tempore ipsam. Perspiciatis, rem!</p>
-        </div>
-        <div className="post-timestamp">
-          <p>12 Dec 2022</p>
-        </div>
-      </div>
-    </div>
-  )
-}
+    </>
+  );
+};
 
 export default SinglePost;
