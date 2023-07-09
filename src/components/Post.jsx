@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Post = ({ img, author, date, title, description, id }) => {
   return (
-    <SinglePostContainer className="single-post">
+    <SinglePostContainer>
       <PostTextContainer className="post-text">
         <Link
           to={`/post/:${id}`}

@@ -13,9 +13,18 @@ const SinglePost = () => {
             </div>
             <div className="post-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aperiam odit officiis nisi quod magnam eligendi sunt repellat
-                deleniti architecto sed.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+                voluptate dolores illum delectus, quam nobis ipsam, sunt earum
+                itaque repellendus voluptas, velit quas veniam fuga ad rerum at
+                vero consequuntur ut expedita quae. Suscipit sapiente in fugiat
+                esse exercitationem quam possimus odit, facilis modi, ullam iste
+                inventore, excepturi porro maxime amet a voluptatum molestias.
+                Delectus voluptatum, reprehenderit atque minus quia ea vitae ab
+                aperiam autem mollitia quis a sapiente quas laudantium iusto
+                enim expedita! Sequi nobis ex explicabo eveniet architecto autem
+                aliquam similique neque laboriosam id suscipit facilis hic
+                fugiat molestiae vero, error voluptatem maxime culpa tempore
+                assumenda, ipsam vitae!
               </p>
             </div>
             <div className="post-timestamp">

@@ -100,3 +100,41 @@ img{
   grid-gap: 30px;
 
 }
+
+.single-post{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 70px;
+  padding-top: 40px;
+  height: 100vh;
+}
+
+.cover-image{
+  width: 100%;
+  display: flex;
+}
+
+.cover-image img{
+  width: 500px !important;
+  height: 250px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post-description{
+  display: flex;
+  width: 40%;
+  height: auto;
+  margin-top: 30px;
+}
+
+.post-title{
+  margin-top: 30px;
+}
+
+.post-description p{
+  line-height: 1.8;
+}
