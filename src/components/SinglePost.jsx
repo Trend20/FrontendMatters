@@ -1,5 +1,8 @@
-import { React } from "react";
+import {useState} from "react";
 const SinglePost = () => {
+  const [postTitle, setPostTitle] = useState('');
+  const [postDesc, setPostDesc] = useState('');
+  const [postItem, setPostItem] = useState({});
   return (
     <>
       <div className="single-post">
@@ -9,22 +12,11 @@ const SinglePost = () => {
           </div>
           <div className="post-de">
             <div className="post-title">
-              <h1>Redux Toolkit</h1>
+              <h1>{postTitle}</h1>
             </div>
             <div className="post-description">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                voluptate dolores illum delectus, quam nobis ipsam, sunt earum
-                itaque repellendus voluptas, velit quas veniam fuga ad rerum at
-                vero consequuntur ut expedita quae. Suscipit sapiente in fugiat
-                esse exercitationem quam possimus odit, facilis modi, ullam iste
-                inventore, excepturi porro maxime amet a voluptatum molestias.
-                Delectus voluptatum, reprehenderit atque minus quia ea vitae ab
-                aperiam autem mollitia quis a sapiente quas laudantium iusto
-                enim expedita! Sequi nobis ex explicabo eveniet architecto autem
-                aliquam similique neque laboriosam id suscipit facilis hic
-                fugiat molestiae vero, error voluptatem maxime culpa tempore
-                assumenda, ipsam vitae!
+                {postDesc}
               </p>
             </div>
             <div className="post-timestamp">
