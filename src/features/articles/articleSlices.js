@@ -12,7 +12,13 @@ const initialState = {
 const articleSlice = createSlice({
   name: "articles",
   initialState,
+  reducers:{
+
+  }
 });
 
 // async_thunk operations
 const getArticles = createAsyncThunk();
+
+export const {} = articleSlice.actions;
+export default articleSlice.reducer;
