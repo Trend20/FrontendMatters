@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <FooterContainer className="footer">
         <FooterLogo className="footer-logo">
-          <Link>
+          <Link to='/'>
             <img src="/images/logo2.png" loading="lazy" alt="footer-logo" />
           </Link>
         </FooterLogo>
@@ -26,7 +26,7 @@ const FooterContainer = styled.div`
   display: flex;
   width: 100%;
   padding: 20px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   // background: #f0f4f5;
   margin-top: 50px;
