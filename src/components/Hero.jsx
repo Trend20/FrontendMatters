@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
   // component state
@@ -8,19 +9,36 @@ const Hero = () => {
   const [error, setError] = useState(null);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
+  // notification alert
+    const notify = () => toast.error("Please Your Email!",{
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+
   // handling email subscription
   const handleEmailSubscription = (e) => {
     // prevent default form behavior
     e.preventDefault();
-    const newEmail = {
-      email,
-    };
-    console.log(newEmail);
-    setEmail("");
+    if(email === ''){
+        notify();
+    }else{
+        const newEmail = {
+            email,
+        };
+        console.log(newEmail);
+        setEmail("");
+    }
   };
   return (
     <HeroContainer className="hero">
       <HeroHeading>Frontend Matters</HeroHeading>
+        <ToastContainer />
       <HeroDescription>
         Explore some of the most trending topics in the Frontend world! There
         are different code snippets for every article explaining about a code
@@ -31,7 +49,6 @@ const Hero = () => {
           type="email"
           placeholder="Your email address"
           value={email}
-          required
           onChange={(e) => setEmail(e.target.value)}
         />
         <HeroFormButton type="submit">Subscribe</HeroFormButton>
