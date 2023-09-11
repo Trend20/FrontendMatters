@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import {supabase} from "../lib/api";
 
 const Hero = () => {
   // component state
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   // notification alert
-    const notify = () => toast.error("Please Your Email!",{
+    const notify = () => toast.error("Please Enter Your Email!",{
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -22,16 +24,20 @@ const Hero = () => {
     });
 
   // handling email subscription
-  const handleEmailSubscription = (e) => {
+  const handleEmailSubscription = async (e) => {
     // prevent default form behavior
     e.preventDefault();
     if(email === ''){
         notify();
     }else{
-        const newEmail = {
-            email,
-        };
-        console.log(newEmail);
+        setLoading(true)
+        const { error} = await supabase.auth.signInWithOtp({email})
+        if(error){
+           alert('Check Your email and try again');
+        }else{
+            alert('Check your email and confirm subscription');
+        }
+        setLoading(false);
         setEmail("");
     }
   };
@@ -51,7 +57,7 @@ const Hero = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <HeroFormButton type="submit">Subscribe</HeroFormButton>
+        <HeroFormButton type="submit">{loading ? 'Loading...' : 'Subscribe'}</HeroFormButton>
       </HeroForm>
     </HeroContainer>
   );
@@ -118,7 +124,7 @@ const HeroFormInput = styled.input`
 
   :focus {
     border: 1px solid #2596be;
-    box-shadow: 0 0 0 0.1rem #2596be !important;
+    box-shadow: 0 0 0 0.1rem #eb4034 !important;
   }
 
   @media (max-width: 768px) {
