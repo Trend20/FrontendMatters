@@ -22,6 +22,7 @@ const AddPost = () =>{
                 error
             } = await supabase.from('articles').insert({title: title, description: description, author: author, timestamp: new Date()});
         dispatch(clearInputValue());
+        console.log(data, error)
         }catch (e) {
             setError(e);
         }
