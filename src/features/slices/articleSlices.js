@@ -18,7 +18,6 @@ const articleSlice = createSlice({
   initialState,
   reducers:{
       addArticle: (state, action) =>{
-        const { title, description, author, coverImg} = state;
         state.title = action.payload;
         state.description = action.payload;
         state.author = action.payload;
@@ -32,6 +31,10 @@ const articleSlice = createSlice({
       state.author ='';
       state.coverImg = '';
       state.date = '';
+    },
+    setInputValue : (state, action) =>{
+        const { field, value} = action.payload;
+        state[field] = value;
     }
   }
 });
@@ -39,5 +42,5 @@ const articleSlice = createSlice({
 // async_thunk operations
 const getArticles = createAsyncThunk();
 
-export const {addArticle, deleteArticle} = articleSlice.actions;
+export const {addArticle, deleteArticle, setInputValue} = articleSlice.actions;
 export default articleSlice.reducer;
