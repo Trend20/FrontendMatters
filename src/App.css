@@ -138,9 +138,51 @@ img{
   line-height: 1.8;
 }
 
+
+/*new post component style*/
 #add-post{
   background: #2596be;
   color: #ffffff !important;
   padding: 10px;
   border-radius: 2px;
 }
+
+.add-new-post{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#newPostForm{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.input{
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.input{
+  width: 100%;
+}
+
+#title,
+#author,
+#description{
+  padding: 15px;
+  outline: none;
+  width: 50%;
+}
+
+#add-btn{
+  margin-top: 20px;
+  width: 20%;
+  padding: 15px;
+  cursor: pointer;
+}
+
