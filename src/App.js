@@ -6,7 +6,8 @@ import { ThemeContext } from "./context/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Posts from "./pages/Posts";
 import SinglePost from "./components/SinglePost";
-import Post from "./components/Post";
+// import Post from "./components/Post";
+import AddPost from "./components/AddPost";
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<Posts />} />
           <Route path="/post/:id" element={<SinglePost />} />
+          <Route path="/addPost" element={<AddPost />} />
         </Routes>
       </div>
     </BrowserRouter>

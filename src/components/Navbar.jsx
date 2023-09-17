@@ -39,10 +39,12 @@ const Navbar = () => {
                   </Item>
                 );
               })}
+              <Link to='/addPost' className="nav-item" id='add-post'>Add Post</Link>
             </Menu>
           </NavBar>
           <NavIconsContainer>
             <Link
+                to=''
               className={` nav-item icons ${
                 darkMode ? "btn-dark" : "btn-light"
               }`}
@@ -50,7 +52,7 @@ const Navbar = () => {
             >
               {darkMode ? <MdOutlineDarkMode /> : <MdLightMode />}
             </Link>
-            <Link className="nav-item icons">
+            <Link  to='' className="nav-item icons">
               <MdRssFeed />
             </Link>
           </NavIconsContainer>

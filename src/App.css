@@ -137,3 +137,10 @@ img{
 .post-description p{
   line-height: 1.8;
 }
+
+#add-post{
+  background: #2596be;
+  color: #ffffff !important;
+  padding: 10px;
+  border-radius: 2px;
+}
