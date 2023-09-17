@@ -35,6 +35,12 @@ const articleSlice = createSlice({
     setInputValue : (state, action) =>{
         const { field, value} = action.payload;
         state[field] = value;
+    },
+    clearInputValue : (state) =>{
+      state.title = ''
+      state.description = ''
+      state.author = ''
+      state.coverImg = ''
     }
   }
 });
@@ -42,5 +48,5 @@ const articleSlice = createSlice({
 // async_thunk operations
 const getArticles = createAsyncThunk();
 
-export const {addArticle, deleteArticle, setInputValue} = articleSlice.actions;
+export const {addArticle, deleteArticle, setInputValue, clearInputValue} = articleSlice.actions;
 export default articleSlice.reducer;

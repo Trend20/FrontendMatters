@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {setInputValue} from "../features/slices/articleSlices";
+import {clearInputValue, setInputValue} from "../features/slices/articleSlices";
 import {useState} from "react";
 import {supabase} from "../lib/api";
 
@@ -21,7 +21,7 @@ const AddPost = () =>{
                 data,
                 error
             } = await supabase.from('articles').insert({title: title, description: description, author: author, timestamp: new Date()});
-            console.log('post data', data);
+        dispatch(clearInputValue());
         }catch (e) {
             setError(e);
         }
