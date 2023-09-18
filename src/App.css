@@ -186,3 +186,18 @@ img{
   cursor: pointer;
 }
 
+/*empty page styles*/
+
+.empty-page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.empty-page img{
+  width: 10%;
+}
+
