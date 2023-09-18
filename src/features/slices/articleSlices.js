@@ -41,6 +41,9 @@ const articleSlice = createSlice({
       state.description = ''
       state.author = ''
       state.coverImg = ''
+    },
+    populateArticles: (state, action) =>{
+        state.articles = action.payload;
     }
   }
 });
@@ -48,5 +51,5 @@ const articleSlice = createSlice({
 // async_thunk operations
 const getArticles = createAsyncThunk();
 
-export const {addArticle, deleteArticle, setInputValue, clearInputValue} = articleSlice.actions;
+export const {addArticle, deleteArticle, setInputValue, clearInputValue, populateArticles} = articleSlice.actions;
 export default articleSlice.reducer;
