@@ -134,6 +134,49 @@ img{
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .posts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .single-post{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 70px;
+    padding-top: 40px;
+  }
+
+  .post-description{
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .post-title{
+    margin-top: 30px;
+  }
+
+  .post-description p{
+    line-height: 1.8;
+  }
+
+  .post-link{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: #2596be;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
 
 /*new post component style*/
 #add-post{
