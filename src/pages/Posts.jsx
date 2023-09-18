@@ -3,10 +3,10 @@ import Post from "../components/Post";
 const Posts = ({articles}) => {
   return (
     <div className="posts">
-      {articles.map((post, index) => {
+      {articles.map((post) => {
         return (
           <Post
-            key={index}
+            key={post.id}
             author={post.author}
             date={post.timestamp}
             title={post.title}

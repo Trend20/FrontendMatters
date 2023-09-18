@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import {useContext, useState} from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -12,14 +12,20 @@ import AddPost from "./components/AddPost";
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  // handle article click
+  const showSelectedItem = (article) =>{
+    setSelectedItem(article);
+  }
   return (
     <BrowserRouter>
       <div className={`btn ${darkMode ? "btn-dark" : "btn-light"}`}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<Posts />} />
-          <Route path="/post/:id" element={<SinglePost />} />
+          <Route path="/articles" element={<Posts showSelectedItem={showSelectedItem}/>} />
+          <Route path="/post/:id" element={<SinglePost selectedItem={selectedItem} />} />
           <Route path="/addPost" element={<AddPost />} />
         </Routes>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Post = ({ img, author, date, title, description, id }) => {
+const Post = ({ author, date, title, description, id, onClick }) => {
   return (
       <PostTextContainer className="post-text">
         <Link className='post-link'
