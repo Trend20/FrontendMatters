@@ -16,7 +16,7 @@ const Posts = () => {
      try {
         const {data: articles, error} = await supabase.from('articles').select('*').order('id',{ ascending: false })
        if (error) console.log("error", error);
-       else setData(articles);
+       else setData([...data, articles]);
        dispatch(populateArticles(data));
        console.log(data)
      }catch (error){
