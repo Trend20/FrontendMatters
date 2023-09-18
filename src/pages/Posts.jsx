@@ -7,9 +7,8 @@ const Posts = ({articles}) => {
         return (
           <Post
             key={index}
-            img={post.img}
             author={post.author}
-            date={post.date}
+            date={post.timestamp}
             title={post.title}
             description={post.description}
           />

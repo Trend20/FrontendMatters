@@ -4,58 +4,39 @@ import styled from "styled-components";
 
 const Post = ({ img, author, date, title, description, id }) => {
   return (
-    <SinglePostContainer>
       <PostTextContainer className="post-text">
-        <Link
+        <Link className='post-link'
           to={`/post/:${id}`}
-          style={{
-            textTransform: "capitalize",
-            fontSize: "1.2rem",
-            color: "#2596be",
-            fontWeight: "700",
-            textDecoration: "none",
-          }}
         >
           {title}
         </Link>
         <p>{description}</p>
+          <Link to={`/post/:${id}`} className='post-link'>Read More -></Link>
         <div>
           <p>{author}</p>
           <p style={{ marginLeft: "20px" }}>{date}</p>
         </div>
       </PostTextContainer>
-      <PostImage className="post-img">
-        <img src={img} loading="lazy" alt="" />
-      </PostImage>
-    </SinglePostContainer>
   );
 };
-const SinglePostContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 30px 0px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    margin: 10px;
-    flex-direction: column-reverse;
-  }
-`;
 
 const PostTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
 
   @media (max-width: 768px) {
     width: 100%;
   }
 
   p {
-    width: 70%;
+    width: 100%;
     font-size: 0.8rem;
     line-height: 2;
     margin-top: 20px;
+    height: 100px !important;
+    overflow: hidden;
+    margin-bottom: 10px;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -64,7 +45,7 @@ const PostTextContainer = styled.div`
 
   div {
     display: flex;
-    width: 50%;
+    width: 70%;
     margin-top: 20px;
 
     @media (max-width: 768px) {
@@ -72,8 +53,7 @@ const PostTextContainer = styled.div`
     }
 
     p {
-      width: 100%;
-      margin-top: 0px;
+      width: 70% !important;
       color: #fff;
       background: #2596be;
       border-radius: 50px;
@@ -81,8 +61,8 @@ const PostTextContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 0.7rem;
-      width: 120px;
+      font-size: 0.8rem;
+      height: auto !important;
     }
   }
 `;

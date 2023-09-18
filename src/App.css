@@ -93,8 +93,8 @@ img{
 
 .posts{
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  width: 80%;
+  grid-template-columns: repeat(4, 2fr);
+  width: 100%;
   margin: auto;
   padding: 100px;
   grid-gap: 30px;
@@ -111,18 +111,6 @@ img{
   padding-top: 40px;
 }
 
-.cover-image{
-  width: 100%;
-  display: flex;
-}
-
-.cover-image img{
-  width: 500px !important;
-  height: 250px !important;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
 .post-description{
   display: flex;
   width: 40%;
@@ -136,6 +124,14 @@ img{
 
 .post-description p{
   line-height: 1.8;
+}
+
+.post-link{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #2596be;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 
