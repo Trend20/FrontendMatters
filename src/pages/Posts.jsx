@@ -7,6 +7,7 @@ const Posts = ({articles}) => {
         return (
           <Post
             key={post.id}
+            id={post.id}
             author={post.author}
             date={post.timestamp}
             title={post.title}

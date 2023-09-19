@@ -1,28 +1,26 @@
 import {useState} from "react";
-import {useSelector} from "react-redux";
-const SinglePost = ({selectedItem}) => {
+
+const SinglePost = () => {
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [timestamp, setTimestamp] = useState('')
+
   return (
-    <>
-      {
-          selectedItem &&  <div className="single-post">
           <div className="single-post">
             <div className="post-de">
               <div className="post-title">
-                <h1>{selectedItem.title}</h1>
+                <h1>{title}</h1>
               </div>
               <div className="post-description">
                 <p>
-                  {selectedItem.description}
+                  {description}
                 </p>
               </div>
               <div className="post-timestamp">
-                <p>{selectedItem.timestamp}</p>
+                <p>{timestamp}</p>
               </div>
             </div>
           </div>
-        </div>
-      }
-    </>
   );
 };
 
