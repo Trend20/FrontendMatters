@@ -5,7 +5,7 @@ import {supabase} from "../lib/api";
 
 const AddPost = () =>{
     const dispatch = useDispatch();
-    const { title, description, author, coverImg} = useSelector((store) => store.article);
+    const { title, description, author} = useSelector((store) => store.article);
     const [error, setError] = useState('');
 
     // handle input change
@@ -41,9 +41,6 @@ const AddPost = () =>{
                <div className="input">
                    <input type="text" id='author' placeholder='Author' value={author} onChange={(e) => handleInputChange('author', e.target.value)} />
                </div>
-                <div className="input">
-                    <input type="file" id='img' value={coverImg} onChange={(e) => handleInputChange('coverImg', e.target.value)}/>
-                </div>
                 <button id='add-btn' type='submit'>Submit</button>
             </form>
         </div>

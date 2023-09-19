@@ -6,8 +6,6 @@ const initialState = {
   title:'',
   description:'',
   author:'',
-  coverImg:'',
-  date:'',
   isLoaded: false,
   error: "",
 };
@@ -21,16 +19,12 @@ const articleSlice = createSlice({
         state.title = action.payload;
         state.description = action.payload;
         state.author = action.payload;
-        state.coverImg = action.payload;
-        state.date = action.payload;
       },
     deleteArticle: (state) =>{
       const { title, description, author, coverImg} = state;
       state.title = '';
       state.description ='';
       state.author ='';
-      state.coverImg = '';
-      state.date = '';
     },
     setInputValue : (state, action) =>{
         const { field, value} = action.payload;
@@ -40,7 +34,6 @@ const articleSlice = createSlice({
       state.title = ''
       state.description = ''
       state.author = ''
-      state.coverImg = ''
     },
     populateArticles: (state, action) =>{
         state.articles = action.payload;
