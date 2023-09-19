@@ -2,11 +2,13 @@ import {useDispatch, useSelector} from "react-redux";
 import {clearInputValue, setInputValue} from "../features/slices/articleSlices";
 import {useState} from "react";
 import {supabase} from "../lib/api";
+import {useNavigate} from "react-router-dom";
 
 const AddPost = () =>{
     const dispatch = useDispatch();
     const { title, description, author} = useSelector((store) => store.article);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     // handle input change
     const handleInputChange = (field, value) =>{
@@ -22,6 +24,7 @@ const AddPost = () =>{
                 error
             } = await supabase.from('articles').insert({title: title, description: description, author: author, timestamp: new Date()});
         dispatch(clearInputValue());
+        navigate('/');
         console.log(data, error)
         }catch (e) {
             setError(e);
