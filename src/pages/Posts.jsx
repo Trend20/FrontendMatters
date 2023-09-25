@@ -6,7 +6,6 @@ const Posts = ({articles}) => {
     <div className="posts">
       {articles.map((post) => {
         return (
-          <Link to={`/post/:${post.id}`}>
             <Post
                 key={post.id}
                 id={post.id}
@@ -15,7 +14,6 @@ const Posts = ({articles}) => {
                 title={post.title}
                 description={post.description}
             />
-          </Link>
         );
       })}
     </div>
