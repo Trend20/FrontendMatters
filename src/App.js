@@ -48,7 +48,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home articles={articles}/>} />
           <Route path="/articles" element={<Posts showSelectedItem={showSelectedItem}/>} />
-          <Route path="/post/:id" element={<SinglePost selectedItem={selectedItem} />} />
+          <Route path="/post/:name" element={<SinglePost />} />
           <Route path="/addPost" element={<AddPost />} />
         </Routes>
       </div>
