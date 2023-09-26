@@ -1,16 +1,10 @@
-import {useEffect, useState} from "react";
-import {supabase} from "../lib/api";
+import {useSelector} from "react-redux";
+import {useParams} from "react-router-dom";
 
 const SinglePost = ({match}) => {
-    const [data, setData] = useState([]);
-    const title = match.params.title;
-    const {data: articles, error} = supabase.from('articles').select('*');
-    useEffect(() =>{
-        const {data: articles, error} = supabase.from('articles').select('*');
-        setData(articles);
-        console.log(articles);
-    },[])
-    const post = data.find((article) => article.title === title);
+    const {articles} = useSelector((store) => store.article);
+    const {title} = useParams();
+    const post = articles.find((article) => article.title === title);
   return (
           <div className="single-post">
             <div className="post-de">

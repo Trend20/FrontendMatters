@@ -47,8 +47,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home articles={articles}/>} />
-          <Route path="/articles" element={<Posts showSelectedItem={showSelectedItem}/>} />
-          <Route path="/post/:name" element={<SinglePost />} />
+          <Route path="/articles" element={<Posts />} />
+          <Route path="/post/:title" element={<SinglePost />} />
           <Route path="/addPost" element={<AddPost />} />
         </Routes>
       </div>
