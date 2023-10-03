@@ -43,9 +43,9 @@ const Hero = () => {
   };
   return (
     <HeroContainer className="hero">
-      <HeroHeading>Frontend Matters</HeroHeading>
+      <HeroHeading data-test='header'>Frontend Matters</HeroHeading>
         <ToastContainer />
-      <HeroDescription>
+      <HeroDescription data-test='description'>
         Explore some of the most trending topics in the Frontend world! There
         are different code snippets for every article explaining about a code
         concept.
