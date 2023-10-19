@@ -10,7 +10,6 @@ const Posts = () => {
         return (
           <Link to={`/posts/${post.id}`} key={post.id}>
             <Post
-              key={post.id}
               id={post.id}
               author={post.author}
               date={post.timestamp}

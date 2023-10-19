@@ -5,11 +5,11 @@ import styled from "styled-components";
 const Post = ({ author, date, title, description, id }) => {
   return (
     <PostTextContainer className="post-text">
-      <Link className="post-link" to={`/post/${id}`}>
+      <Link className="post-link" to={`/posts/${id}`}>
         {title}
       </Link>
       <p>{description}</p>
-      <Link to={`/post/${id}`} className="post-link">
+      <Link to={`/posts/${id}`} className="post-link">
         Read More
       </Link>
       <div>
