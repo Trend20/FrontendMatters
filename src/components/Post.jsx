@@ -2,21 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Post = ({ author, date, title, description}) => {
+const Post = ({ author, date, title, description, id }) => {
   return (
-      <PostTextContainer className="post-text">
-        <Link className='post-link'
-          to={`/post/:${title}`}
-        >
-          {title}
-        </Link>
-        <p>{description}</p>.trim('')
-          <Link to={`/post/:${title}`} className='post-link'>Read More -></Link>
-        <div>
-          <p>{author}</p>
-          <p style={{ marginLeft: "20px" }}>{date}</p>
-        </div>
-      </PostTextContainer>
+    <PostTextContainer className="post-text">
+      <Link className="post-link" to={`/post/${id}`}>
+        {title}
+      </Link>
+      <p>{description}</p>
+      <Link to={`/post/${id}`} className="post-link">
+        Read More
+      </Link>
+      <div>
+        <p>{author}</p>
+        <p style={{ marginLeft: "20px" }}>{date}</p>
+      </div>
+    </PostTextContainer>
   );
 };
 
