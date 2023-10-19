@@ -109,9 +109,11 @@ img{
   justify-content: flex-start;
   padding: 70px;
   padding-top: 40px;
+  height: auto;
+  color: #fff !important;
 }
 
-.post-description{
+.post-details{
   display: flex;
   width: 40%;
   height: auto;
@@ -133,6 +135,25 @@ img{
   font-weight: 700;
   text-decoration: none;
 }
+
+/* LOADER STYLES */
+#spinner {
+   width: 56px;
+   height: 56px;
+   border: 11.2px #474bff double;
+   border-left-style: solid;
+   border-radius: 50%;
+   animation: spinner-aib1d7 0.75s infinite linear;
+}
+
+@keyframes spinner-aib1d7 {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+
+/* END OF LOADER STYLES */
 
 @media (max-width: 768px) {
   .posts{
