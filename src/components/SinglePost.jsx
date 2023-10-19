@@ -39,11 +39,11 @@ const SinglePost = () => {
           <div className="post-description">
             <p>{description}</p>
           </div>
-          <div className="post-author">
+          {/* <div className="post-author">
             <p>{author}</p>
-          </div>
+          </div> */}
           <div className="post-timestamp">
-            <p>{timestamp}</p>
+            <p>Published on {timestamp}</p>
           </div>
         </div>
       )}

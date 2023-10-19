@@ -109,23 +109,33 @@ img{
   justify-content: flex-start;
   padding: 70px;
   padding-top: 40px;
-  height: auto;
+  min-height: 100vh;
   color: #fff !important;
 }
 
 .post-details{
   display: flex;
-  width: 40%;
-  height: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
   margin-top: 30px;
 }
 
 .post-title{
   margin-top: 30px;
+  color: #2596be;
+}
+
+.post-description{
+  margin-top: 30px !important;
 }
 
 .post-description p{
-  line-height: 1.8;
+  line-height: 2.2;
+}
+
+.post-timestamp{
+  margin-top: 30px;
 }
 
 .post-link{

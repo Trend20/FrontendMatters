@@ -10,6 +10,7 @@ import AddPost from "./components/AddPost";
 import { useDispatch } from "react-redux";
 import { supabase } from "./lib/api";
 import { populateArticles } from "./features/slices/articleSlices";
+import Footer from "./components/Footer";
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -45,6 +46,7 @@ function App() {
           <Route path="/posts/:id" element={<SinglePost />} />
           <Route path="/addPost" element={<AddPost />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
