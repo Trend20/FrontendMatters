@@ -30,7 +30,7 @@ const Header = () => {
         <Image src="/logo.png" alt="logo" height="100" width="100" />
       </div>
 
-      <div className="flex justify-between w-1/4 items-center">
+      <div className="flex justify-between w-[580px] items-center">
         {navLinks.map((item) => (
           <LinkItem
             key={item.id}
