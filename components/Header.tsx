@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import LinkItem from "./LinkItem";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const navLinks = [
   {
@@ -27,7 +28,9 @@ const Header = () => {
   return (
     <div className="flex w-full px-32 py-8 items-center justify-between">
       <div className="flex">
-        <Image src="/logo.png" alt="logo" height="100" width="100" />
+        <Link href="/">
+          <Image src="/logo.png" alt="logo" height="100" width="100" />
+        </Link>
       </div>
 
       <div className="flex justify-between w-[580px] items-center">
@@ -42,7 +45,7 @@ const Header = () => {
         <LinkItem
           url="/login"
           linkName="Get Started"
-          className="rounded-md outline-none p-2 w-36 bg-meta-5 text-whiten"
+          className="rounded-md outline-none p-2.5 w-36 bg-meta-5 text-whiten"
         />
       </div>
     </div>

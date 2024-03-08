@@ -11,7 +11,7 @@ const LinkItem = ({ url, linkName, className }: LinkProps) => {
   return (
     <Link
       href={url}
-      className={`${className} flex capitalize font-semibold justify-center items-center`}
+      className={`${className} flex capitalize justify-center items-center`}
     >
       {linkName}
     </Link>
