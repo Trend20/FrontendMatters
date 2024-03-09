@@ -5,11 +5,12 @@ const Hero = () => {
   return (
     <div className="flex w-full px-32 py-20">
       <div className="flex flex-col w-1/2 items-start justify-start">
-        <h3 className="text-5xl font-extrabold text-black-2 w-3/4 leading-[1.1]">
+        <h3 className="text-7xl font-extrabold text-black-2 leading-[1.1]">
           Frontend is changing. Stay Informed.
         </h3>
-        <p className="text-xl leading-10 mt-8 w-3/4">
-          Discover articles and news happening in the Frontend World!
+        <p className="text-2xl leading-10 mt-8 w-3/4">
+          Discover articles and news on everything happening in the Frontend
+          World!
         </p>
         <button className="flex justify-center items-center outline-none text-lg bg-meta-5 text-whiten mt-8 p-2.5 rounded-md">
           Start Reading
@@ -22,12 +23,24 @@ const Hero = () => {
             alt="hero1"
             height="300"
             width="300"
-            className="rounded-bl-lg "
+            className="rounded-br-lg rounded-tl-lg"
           />
         </div>
-        <div className="flex flex-col">
-          <Image src="/images/hero2.jpg" alt="hero1" height="200" width="200" />
-          <Image src="/images/hero3.jpg" alt="hero1" height="200" width="200" />
+        <div className="flex flex-col ml-3">
+          <Image
+            src="/images/hero2.jpg"
+            alt="hero1"
+            height="200"
+            width="200"
+            className="rounded-br-lg rounded-tl-lg"
+          />
+          <Image
+            src="/images/hero3.jpg"
+            alt="hero1"
+            height="200"
+            width="200"
+            className="rounded-br-lg rounded-tl-lg mt-3"
+          />
         </div>
       </div>
     </div>
