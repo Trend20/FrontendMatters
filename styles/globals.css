@@ -13,5 +13,6 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+    /* color: #259ae6 */
   }
 }

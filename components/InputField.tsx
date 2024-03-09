@@ -9,11 +9,11 @@ const InputField = ({ type, className, onChange, placeholder, value }: any) => {
         onChange={onChange}
         placeholder={placeholder}
         value={value}
-        className={`${className} flex p-2.5 outline-none border border-grey rounded-md`}
+        className={`${className} flex p-2.5 text-lg font-semibold outline-none border border-grey rounded-l-md w-36`}
       />
-      <i>
+      {/* <i>
         <CiMail size={30} />
-      </i>
+      </i> */}
     </div>
   );
 };
