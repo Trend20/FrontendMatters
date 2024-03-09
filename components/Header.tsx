@@ -29,7 +29,13 @@ const Header = () => {
     <div className="flex w-full px-32 py-8 items-center justify-between">
       <div className="flex">
         <Link href="/">
-          <Image src="/logo.png" alt="logo" height="100" width="100" />
+          <Image
+            src="logo.svg"
+            alt="logo"
+            height="200"
+            width="200"
+            className="flex w-32.5"
+          />
         </Link>
       </div>
 
