@@ -1,31 +1,43 @@
-import { NextAuthOptions } from "next-auth";
+import { NextAuthOptions, User, getServerSession } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+import prisma from "./prisma";
 
 export const authConfig: NextAuthOptions = {
   providers: [
-    // CredentialsProvider({
-    //   id: "github",
-    //   name: "GitHub",
-    //   credentials: {
-    //     token: { label: "Token", type: "password" },
-    //   },
-    //   async authorize(credentials) {
-    //     // Fetch user data using the provided personal access token
-    //     const user = await fetch("https://api.github.com/user", {
-    //       headers: {
-    //         Authorization: `token ${credentials?.token}`,
-    //       },
-    //     }).then((res) => res.json());
+    CredentialsProvider({
+      name: "Sign in",
+      credentials: {
+        email: {
+          label: "Email",
+          type: "email",
+          placeholder: "example@example.com",
+        },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        if (!credentials || !credentials.email || !credentials.password)
+          return null;
 
-    //     // Check if user data was fetched successfully
-    //     if (user) {
-    //       return { ...user, token: credentials?.token };
-    //     } else {
-    //       return null;
-    //     }
-    //   },
-    // }),
+        const dbUser = await prisma.user.findFirst({
+          where: { email: credentials.email },
+        });
+        // Verify Password here
+        // We are going to use a simple === operator
+        // In production DB, passwords should be encrypted using something like bcrypt...
+        if (dbUser && dbUser.password === credentials.password) {
+          const { password, createdAt, id, ...dbUserWithoutPassword } = dbUser;
+          return dbUserWithoutPassword as User;
+        }
+
+        return null;
+      },
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    }),
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID as string,
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
