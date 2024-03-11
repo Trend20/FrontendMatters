@@ -5,11 +5,8 @@ import { FiGithub } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-interface CredentialsFormProps {
-  csrfToken?: string;
-}
 
-const Login = (props: CredentialsFormProps) => {
+const Login = () => {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
 
