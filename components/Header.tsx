@@ -25,36 +25,41 @@ const navLinks = [
 
 const Header = () => {
   const pathname = usePathname();
+  const containsLogin = pathname.includes("login");
   return (
-    <div className="flex w-full px-32 py-8 items-center justify-between">
-      <div className="flex">
-        <Link href="/">
-          <Image
-            src="logo.svg"
-            alt="logo"
-            height="200"
-            width="200"
-            className="flex w-32.5"
-          />
-        </Link>
-      </div>
+    <>
+      {!containsLogin && (
+        <div className="flex w-full px-32 py-8 items-center justify-between">
+          <div className="flex">
+            <Link href="/">
+              <Image
+                src="logo.svg"
+                alt="logo"
+                height="200"
+                width="200"
+                className="flex w-32.5"
+              />
+            </Link>
+          </div>
 
-      <div className="flex justify-between w-[580px] items-center">
-        {navLinks.map((item) => (
-          <LinkItem
-            key={item.id}
-            url={item.url}
-            linkName={item.name}
-            className={`${pathname === item.url ? "active" : ""}`}
-          />
-        ))}
-        <LinkItem
-          url="/login"
-          linkName="Get Started"
-          className="rounded-md outline-none p-2.5 w-36 bg-meta-5 text-whiten"
-        />
-      </div>
-    </div>
+          <div className="flex justify-between w-[580px] items-center">
+            {navLinks.map((item) => (
+              <LinkItem
+                key={item.id}
+                url={item.url}
+                linkName={item.name}
+                className={`${pathname === item.url ? "active" : ""}`}
+              />
+            ))}
+            <LinkItem
+              url="/login"
+              linkName="Get Started"
+              className="rounded-md outline-none p-2.5 w-36 bg-meta-5 text-whiten"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
