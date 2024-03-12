@@ -18,7 +18,7 @@ const LatestArticles = async () => {
   const blogs = await getBlogs();
   const latestArticles = blogs.blogs.slice(1, 9);
   return (
-    <div className="flex flex-col w-full px-36 py-20">
+    <div className="flex flex-col w-full px-36 py-20" id="latest">
       <h3 className="text-2xl font-extrabold text-black-2 py-3">
         Latest Articles
       </h3>

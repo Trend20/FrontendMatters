@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { Link, animateScroll as scroll, scrollSpy } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -12,7 +13,10 @@ const Hero = () => {
           Discover articles and news on everything happening in the Frontend
           World!
         </p>
-        <button className="flex justify-center items-center outline-none text-lg bg-meta-5 text-whiten mt-8 w-36 p-2.5 rounded-md">
+        <button
+          id="#latest"
+          className="flex justify-center items-center outline-none text-lg bg-meta-5 text-whiten mt-8 w-36 p-2.5 rounded-md"
+        >
           Start Reading
         </button>
       </div>
