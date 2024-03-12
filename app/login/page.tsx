@@ -5,6 +5,9 @@ import { FiGithub } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import MyToast from "../../utils/alert";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface CredentialsFormProps {
   csrfToken?: string;
@@ -33,6 +36,11 @@ const Login = (props: CredentialsFormProps) => {
       router.push("/articles");
     } else {
       console.log("Error: ", signInResponse);
+      // MyToast(signInResponse, "error");
+      toast.error(`${signInResponse}`, {
+        position: "top-right",
+        theme: "colored",
+      });
       setError("Your Email or Password is wrong!");
     }
   };
@@ -40,6 +48,7 @@ const Login = (props: CredentialsFormProps) => {
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8">
+        <ToastContainer />
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm w-1/2 flex items-center flex-col justify-center">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center items-center w-full">
             <Image
