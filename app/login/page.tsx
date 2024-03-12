@@ -6,7 +6,11 @@ import { FcGoogle } from "react-icons/fc";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const Login = () => {
+interface CredentialsFormProps {
+  csrfToken?: string;
+}
+
+const Login = (props: CredentialsFormProps) => {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
 
@@ -14,6 +18,7 @@ const Login = () => {
     preventDefault: () => void;
     currentTarget: HTMLFormElement | undefined;
   }) => {
+    console.log("Submitted");
     e.preventDefault();
     const data = new FormData(e.currentTarget);
 
@@ -24,7 +29,7 @@ const Login = () => {
     });
 
     if (signInResponse && !signInResponse.error) {
-      //Redirect to homepage (/timeline)
+      //Redirect to homepage
       router.push("/articles");
     } else {
       console.log("Error: ", signInResponse);
