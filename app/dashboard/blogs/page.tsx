@@ -1,7 +1,19 @@
-import React from "react";
+"use client";
+import AddBlogForm from "@/components/AddBlogForm";
+import React, { useState } from "react";
 
 const PublishedBlogs = () => {
-  return <div>PublishedBlogs</div>;
+  const [blogs, setBlogs] = useState([]);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(!open);
+
+  return (
+    <div>
+      <button onClick={handleOpen}>Add Blog</button>
+      <AddBlogForm open={open} handleOpen={handleOpen} />
+    </div>
+  );
 };
 
 export default PublishedBlogs;
