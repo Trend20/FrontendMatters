@@ -1,6 +1,6 @@
 ## FrontendMatters
 
-Blog Application
+````Blog Application
 ├── components
 │ ├── Header.tsx
 │ ├── Footer.tsx
@@ -42,4 +42,5 @@ Blog Application
 ├── postcss.config.js
 ├── tailwind.config.js
 ├── package.json
-└── ...
+└── ...```
+````
