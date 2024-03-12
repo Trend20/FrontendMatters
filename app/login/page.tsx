@@ -3,9 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import MyToast from "../../utils/alert";
+import { signIn, useSession } from "next-auth/react";
+import { redirect, useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -16,6 +15,18 @@ interface CredentialsFormProps {
 const Login = (props: CredentialsFormProps) => {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const session = useSession();
+
+  console.log("Session: ", session);
+
+  if (session) {
+    return redirect("/profile");
+  } else {
+    console.log("not found");
+  }
 
   const handleSubmit = async (e: {
     preventDefault: () => void;
@@ -23,11 +34,10 @@ const Login = (props: CredentialsFormProps) => {
   }) => {
     console.log("Submitted");
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
 
     const signInResponse = await signIn("credentials", {
-      email: data.get("email"),
-      password: data.get("password"),
+      email,
+      password,
       redirect: false,
     });
 
@@ -72,8 +82,8 @@ const Login = (props: CredentialsFormProps) => {
               </label>
               <div className="mt-2">
                 <input
-                  id="email"
-                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   autoComplete="email"
                   required
@@ -101,8 +111,8 @@ const Login = (props: CredentialsFormProps) => {
               </div>
               <div className="mt-2">
                 <input
-                  id="password"
-                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   autoComplete="current-password"
                   required

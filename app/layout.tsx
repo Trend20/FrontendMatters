@@ -22,7 +22,9 @@ export default function RootLayout({
             {/* header */}
             <Header />
             {/* main homepage contents */}
-            <main>{children}</main>
+            <main className="flex flex-col w-full min-h-screen">
+              {children}
+            </main>
             {/* footer */}
             <Footer />
           </div>
