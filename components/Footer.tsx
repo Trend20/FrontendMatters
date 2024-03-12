@@ -9,7 +9,8 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const pathname = usePathname();
-  const containsLogin = pathname.includes("login");
+  const containsLogin =
+    pathname.includes("login") || pathname.includes("dashboard");
   const [email, setEmail] = useState<string>("");
   return (
     <>

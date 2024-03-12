@@ -30,7 +30,8 @@ const darkMode = false;
 
 const Header = () => {
   const pathname = usePathname();
-  const containsLogin = pathname.includes("login");
+  const containsLogin =
+    pathname.includes("login") || pathname.includes("dashboard");
   return (
     <>
       {!containsLogin && (
