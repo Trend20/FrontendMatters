@@ -55,6 +55,7 @@ Frontend Matters
 ```
 
 app
+
 This directory is where the Next.js App Router is configured.
 layout.tsx: This file defines the root layout for the application, which can include components like the header and footer.
 page.tsx: This is the root page component, which could render the home page or a list of featured blog posts.
