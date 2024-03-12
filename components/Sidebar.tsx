@@ -16,13 +16,13 @@ const sidebarLinks = [
   {
     id: 2,
     linkName: "Blogs",
-    linkUrl: "/blogs",
+    linkUrl: "/dashboard/blogs",
     linkIcon: <GrArticle size={30} />,
   },
   {
     id: 3,
     linkName: "Settings",
-    linkUrl: "/settings",
+    linkUrl: "/dashboard/settings",
     linkIcon: <MdOutlineSettings size={30} />,
   },
 ];
