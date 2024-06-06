@@ -8,11 +8,7 @@ import { redirect, useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-interface CredentialsFormProps {
-  csrfToken?: string;
-}
-
-const Login = (props: CredentialsFormProps) => {
+const Login = () => {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [email, setEmail] = useState("");
