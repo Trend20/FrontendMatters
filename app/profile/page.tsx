@@ -23,7 +23,7 @@ const Profile = () => {
           <p>Email: {session.user?.email}</p>
           <p>Avatar:</p>
           <Image
-            src={session?.user?.image}
+            src={session?.user?.image!}
             alt="Avatar"
             width="100"
             height="100"
