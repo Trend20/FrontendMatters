@@ -24,7 +24,7 @@ const AddBlogForm = ({ open, handleOpen }: any) => {
 
   return (
     <>
-      <Dialog
+      <Dialog placeholder={""}
         open={open}
         size="lg"
         className="p-8"
